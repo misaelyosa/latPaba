@@ -40,8 +40,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:text="Page 1"
+        android:layout_marginEnd="16dp"
+        android:text="Game"
         app:layout_constraintBottom_toTopOf="@+id/frameContainer"
+        app:layout_constraintEnd_toStartOf="@+id/btnFragment2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -50,7 +52,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="Page 2"
+        android:text="Score"
         app:layout_constraintEnd_toStartOf="@+id/btnFragment3"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toEndOf="@+id/btnFragment1"
@@ -60,10 +62,12 @@
         android:id="@+id/btnFragment3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginEnd="24dp"
-        android:text="Page 3"
+        android:text="Settings"
         app:layout_constraintBottom_toTopOf="@+id/frameContainer"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnFragment2"
         app:layout_constraintTop_toTopOf="parent" />
 
 

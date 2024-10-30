@@ -2,6 +2,7 @@ package paba.b.latihanfragment
 
 import android.os.Bundle
 import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -28,11 +29,42 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
 //        nav
+        val _tvHalaman = findViewById<TextView>(R.id.tvHalaman)
+
+        val _btnFragment1 = findViewById<Button>(R.id.btnFragment1)
+        _btnFragment1.setOnClickListener {
+            _tvHalaman.text = "Halaman 1"
+
+            val mfPageGame = fPageGame()
+            mFragmentManager.beginTransaction().apply {
+                replace(R.id.frameContainer, mfPageGame, fPageGame::class.java.simpleName)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
+        val _btnFragment2 = findViewById<Button>(R.id.btnFragment2)
+        _btnFragment2.setOnClickListener {
+            _tvHalaman.text =  "Halaman 2"
+
+            val mfPageScore = pageScore()
+            mFragmentManager.beginTransaction().apply {
+                replace(R.id.frameContainer, mfPageScore, pageScore::class.java.simpleName)
+                addToBackStack(null)
+                commit()
+            }
+        }
+
         val _btnFragment3 = findViewById<Button>(R.id.btnFragment3)
         _btnFragment3.setOnClickListener {
-            val pageName = Bundle()
-            pageName.putString("PAGENUM", "Halaman 3")
+            _tvHalaman.text =  "Halaman 3"
 
+            val mfSetBoundary = fPageSetBoundary()
+            mFragmentManager.beginTransaction().apply {
+                replace(R.id.frameContainer, mfSetBoundary, fPageSetBoundary::class.java.simpleName)
+                addToBackStack(null)
+                commit()
+            }
 
         }
     }
