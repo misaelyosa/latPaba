@@ -18,6 +18,8 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+        val _tvHalaman = findViewById<TextView>(R.id.tvHalaman)
+        _tvHalaman.text = "Halaman 1"
 
         val mFragmentManager = supportFragmentManager
         val mfSatu = fPageGame()
@@ -29,8 +31,6 @@ class MainActivity : AppCompatActivity() {
             .commit()
 
 //        nav
-        val _tvHalaman = findViewById<TextView>(R.id.tvHalaman)
-
         val _btnFragment1 = findViewById<Button>(R.id.btnFragment1)
         _btnFragment1.setOnClickListener {
             _tvHalaman.text = "Halaman 1"
