@@ -1,6 +1,7 @@
 package paba.b.latihanfragment
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -25,5 +26,14 @@ class MainActivity : AppCompatActivity() {
             .beginTransaction()
             .add(R.id.frameContainer, mfSatu, fPageGame::class.java.simpleName)
             .commit()
+
+//        nav
+        val _btnFragment3 = findViewById<Button>(R.id.btnFragment3)
+        _btnFragment3.setOnClickListener {
+            val pageName = Bundle()
+            pageName.putString("PAGENUM", "Halaman 3")
+
+
+        }
     }
 }

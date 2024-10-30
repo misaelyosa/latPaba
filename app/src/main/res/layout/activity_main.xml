@@ -51,13 +51,13 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="Page 2"
-        app:layout_constraintEnd_toStartOf="@+id/btnFragment"
+        app:layout_constraintEnd_toStartOf="@+id/btnFragment3"
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toEndOf="@+id/btnFragment1"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btnFragment"
+        android:id="@+id/btnFragment3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="24dp"
